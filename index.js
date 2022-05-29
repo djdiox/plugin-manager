@@ -54,6 +54,7 @@ const seedData = async () => {
     }
 }
 
+
 const readPageHeadless = async (url) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
