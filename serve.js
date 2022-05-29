@@ -1,7 +1,18 @@
-const express = require('express');
+import express from 'express';
+import nodemon from 'nodemon';
+import PluginCrudWrapper from './plugins-crud-wrapper';
+const router = express.Router();
 
-var router = express.Router();
+const sendResponse = (data = Object, code = 200) => {
+ return {
+     body: JSON.stringify(data),
+     statusCode: code
+ }
+}
 
-router('/list', function(req, res) {
-    console.log('Received request'. req)
+router('/list/:platform', function(req, res) {
+    console.log('Received request'. req);
+    var data = PluginCrudWrapper.read(req.params.platform, req.query.limit. req.query.page);
+    const response = {success: true, data, mesage:'Successfully retrieved plugin list'};
+    return sendResponse(response)
 })
