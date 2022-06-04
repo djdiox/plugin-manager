@@ -1,7 +1,7 @@
 import express from 'express';
 import nodemon from 'nodemon';
 import PluginCrudWrapper from './plugins-crud-wrapper';
-const router = express.Router();
+const router = express.Router({});
 
 const sendResponse = (data = Object, code = 200) => {
  return {

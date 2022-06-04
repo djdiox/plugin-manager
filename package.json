@@ -1,31 +1,23 @@
 {
   "name": "plugin-manager",
   "version": "1.0.0",
-  "description": "Many Software has them, but finding them are complicated. Not anymore! Based on the biggest databases for plugins and many other platforms around plugins for well known sofware!",
+  "description": "This is the complete software (devided into server/client. Can be installed",
   "main": "index.js",
-  "devDependencies": {},
-  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "forever"
   },
   "repository": {
     "type": "git",
-    "url": "test"
+    "url": "git+https://github.com/djdiox/plugin-manager.git"
   },
-  "keywords": [
-    "plugins",
-    "manager",
-    "download",
-    "repository",
-    "software",
-    "helper"
-  ],
   "author": "Markus Wagner (djdiox)",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.18.1",
-    "fetch-to-curl": "^0.5.2",
-    "lodash": "^4.17.21",
-    "puppeteer": "^14.1.1"
+  "bugs": {
+    "url": "https://github.com/djdiox/plugin-manager/issues"
+  },
+  "homepage": "https://github.com/djdiox/plugin-manager#readme",
+  "devDependencies": {
+    "forever": "^4.0.3"
   }
 }
